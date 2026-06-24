@@ -152,6 +152,38 @@
     font-size: 12px; color: var(--ink-l);
   }
   .footer a { color: var(--mint-d); text-decoration: none; }
+
+  /* ====== アクセス（地図カード） ====== */
+  .map-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 12px 12px 14px;
+    box-shadow: 0 6px 20px rgba(95,179,163,0.14);
+  }
+  .map-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 11;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .map-frame iframe {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%; border: 0;
+  }
+  .map-addr {
+    text-align: center;
+    font-size: 13px; font-weight: 500;
+    margin: 12px 4px 10px;
+  }
+  .map-btn {
+    display: block; text-align: center;
+    text-decoration: none;
+    background: #eafaf4; color: var(--mint-d);
+    border-radius: 12px;
+    padding: 11px 14px;
+    font-size: 14px; font-weight: 700;
+  }
 </style>
 </head>
 <body>
@@ -211,6 +243,22 @@
       <span class="txt">ホームページ<small>赤羽歯科・フレンドデンタルオフィス</small></span>
       <span class="arrow">›</span>
     </a>
+
+    <!-- ========== アクセス（地図） ========== -->
+    <div class="sec-title">アクセス</div>
+
+    <div class="map-card">
+      <div class="map-frame">
+        <!-- 地図は住所方式。住所を変える時はこの q= の住所を差し替え（reception.html も同様） -->
+        <iframe
+          src="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8C%97%E5%8C%BA%E5%BF%97%E8%8C%821-17-10&output=embed"
+          title="赤羽歯科 所在地" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="map-addr">東京都北区志茂1-17-10</div>
+      <a class="map-btn" href="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8C%97%E5%8C%BA%E5%BF%97%E8%8C%821-17-10" target="_blank" rel="noopener">
+        Googleマップで開く ›
+      </a>
+    </div>
 
     <!-- ========== フッター ========== -->
     <footer class="footer">
